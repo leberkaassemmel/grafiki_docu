@@ -1,18 +1,23 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+import logo from './assets/grafiki.svg';
+import Image from 'next/image';
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>grafiki - documentation</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://www.grafiki.app/',
+    icon: <Image
+      height={30}
+      priority
+      src={logo}
+      alt="Logo"
+    />
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/leberkaassemmel/grafiki_docu',
   footer: {
     text: 'Nextra Docs Template',
   },
-}
+};
 
-export default config
+export default config;
