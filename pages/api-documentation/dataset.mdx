@@ -1,0 +1,61 @@
+# Dataset
+
+In grafiki, a Dataset is a fundamental object that stores all your data. Currently, Datasets have a tabular structure, consisting of columns as attributes and rows as data points. However, we're excited to announce that future updates will introduce support for nested structures, giving you even more flexibility and power to organize your data.
+
+## Structure of a Dataset
+
+To create a Dataset in grafiki, you'll need to provide the following attributes. Please refer to the table below for a detailed breakdown:
+
+| Attribute | Type          | Required | Description                                                                 |
+| --------- | ------------- | -------- | --------------------------------------------------------------------------- |
+| uuid      | `string`      | Optional | A universally unique identifier for the Dataset                             |
+| data      | `any[]`       | Required | An array of data points that make up the Dataset                            |
+| tags      | `string[]`    | Optional | An array of strings used to categorize or filter the Dataset                |
+| name      | `string`      | Required | A human-readable name for the Dataset                                       |
+| info      | `DatasetInfo` | Optional | Additional metadata about the Dataset (this will be generated automtically) |
+
+### DatasetInfo Attributes
+
+If you choose to provide a `info` attribute, it should contain the following:
+
+| Attribute  | Type     | Required | Description                                                                |
+| ---------- | -------- | -------- | -------------------------------------------------------------------------- |
+| attributes | `string` | Required | An object with keys as attribute names and values as AttributeInfo objects |
+| size       | `number` | Optional | The number of data points in the Dataset                                   |
+
+### AttributeInfo Attributes
+
+Each AttributeInfo object should contain the following:
+
+| Attribute | Type                              | Required | Description                                                              |
+| --------- | --------------------------------- | -------- | ------------------------------------------------------------------------ |
+| type      | `string` \| `number` \| `boolean` | Required | The data type of the attribute                                           |
+| min       | `number`                          | Optional | The minimum value for the attribute                                      |
+| max       | `number`                          | Optional | The maximum value for the attribute                                      |
+| options   | `string[]`                        | Required | An array of possible values for the attribute                            |
+| exclude   | `boolean`                         | Optional | A boolean indicating whether to exclude this attribute from aggregations |
+| text      | `string`                          | Optional | A human-readable description of the attribute                            |
+
+## Example Dataset
+
+Here's a simple example of a Dataset in JSON format:
+
+```json showLineNumbers
+{
+  "name": "My First Dataset",
+  "data": [
+    { "Age": 25, "Name": "John", "City": "NYC" },
+    { "Age": 30, "Name": "Jane", "City": "LA" }
+  ],
+  "tags": ["example", "demo"],
+  "info": {
+    "attributes": {
+      "Age": { "type": "number", "min": 25, "max": 30 },
+      "Name": { "type": "string", "options": ["John", "Jane"] },
+      "City": { "type": "string", "options": ["NYC", "LA"] }
+    }
+  }
+}
+```
+
+This example Dataset has a `name` and an array of `data` points with three attributes: `Age`, `Name`, and `City`. The `info` object provides additional metadata about the attributes, including their data types and possible values.

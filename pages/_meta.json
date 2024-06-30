@@ -1,15 +1,12 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "index": "Get Started",
+  "quick-start": "Quick Start",
+  "usage": "Work with your Data",
+  "api-documentation": "API Documentation",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "mailto:info@grafiki.app",
     "newWindow": true
   }
 }

@@ -1,0 +1,101 @@
+# Template
+
+In grafiki, a Template is a pre-designed layout that helps you create dashboards quickly and efficiently. It consists of a collection of items, each with its own configuration and layout.
+
+## Structure of a Template
+
+To create a Template in grafiki, you'll need to provide the following attributes. Please refer to the table below for a detailed breakdown:
+
+| Attribute | Type       | Required | Description                                                   |
+| --------- | ---------- | -------- | ------------------------------------------------------------- |
+| uuid      | `string`   | Required | A universally unique identifier for the Template              |
+| items     | `Item[]`   | Required | An array of Item objects that make up the Template            |
+| tags      | `string[]` | Optional | An array of strings used to categorize or filter the Template |
+| name      | `string`   | Required | A human-readable name for the Template                        |
+| temporary | `boolean`  | Optional | A boolean indicating whether the Template is temporary        |
+
+### Item Attributes
+
+Each Item object should contain the following:
+
+| Attribute  | Type              | Required | Description                                                              |
+| ---------- | ----------------- | -------- | ------------------------------------------------------------------------ |
+| uuid       | `string`          | Required | A universally unique identifier for the Item                             |
+| name       | `string`          | Required | A human-readable name for the Item                                       |
+| type       | `ItemType`        | Required | The type of the Item                                                     |
+| layout     | `Plotly.Layout`   | Optional | Layout configuration for the Item                                        |
+| config     | `Plotly.Config`   | Optional | Config configuration for the Item                                        |
+| traces     | `TraceAttributes` | Optional | Traces configuration for the Item, referencing attributes from a Dataset |
+| groups     | `ItemGroups`      | Optional | Groups configuration for the Item                                        |
+| filter     | `FilterInfo`      | Optional | Filter configuration for the Item                                        |
+| transforms | `Transforms`      | Optional | Transforms configuration for the Item                                    |
+| h          | `number`          | Required | Height of the Item                                                       |
+| w          | `number`          | Required | Width of the Item                                                        |
+| x          | `number`          | Required | X-coordinate of the Item                                                 |
+| y          | `number`          | Optional | Y-coordinate of the Item                                                 |
+
+### Trace Attributes
+
+Each Trace object should contain the following:
+
+| Attribute | Type     | Required | Description                              |
+| --------- | -------- | -------- | ---------------------------------------- |
+| value     | `string` | Required | The name of the attribute from a Dataset |
+| role      | `"data"` | Required | The role of the attribute in the Item    |
+
+## Example Template
+
+Here's a simple example of a Template in JSON format:
+
+```json showLineNumbers
+{
+  "uuid": "template-uuid",
+  "items": [
+    {
+      "name": "New box item",
+      "type": "box",
+      "h": 14,
+      "w": 6,
+      "x": 0,
+      "y": 0,
+      "traces": {
+        "x": {
+          "value": "alive",
+          "role": "data"
+        },
+        "y": {
+          "value": "age",
+          "role": "data"
+        }
+      },
+      "layout": {
+        "xaxis": {
+          "type": "-"
+        }
+      }
+    },
+    {
+      "name": "New scatter item",
+      "type": "scatter",
+      "h": 14,
+      "w": 6,
+      "x": 6,
+      "y": 0,
+      "traces": {
+        "x": {
+          "value": "age",
+          "role": "data"
+        },
+        "y": {
+          "value": "fare",
+          "role": "data"
+        }
+      }
+    }
+  ],
+  "tags": ["example", "demo"],
+  "name": "My First Template"
+}
+```
+
+This example Template has a unique `uuid`, an array of two `items` and optional `tags` and `name` attributes. Each `Item` has its own configuration, including `layout` and `traces` settings.

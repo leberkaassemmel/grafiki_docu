@@ -1,0 +1,37 @@
+import { Edit, Filter, ToggleLeft, Hash, Archive } from "lucide-react";
+
+# Filters
+
+grafiki is designed to help you make the most of your data, and that includes filtering out the noise to focus on what's important. Our filtering feature is easy to use and flexible, allowing you to apply filters to specific items or all items globally.
+
+## Filtering Specific Items
+
+Want to drill down into a specific item's data? You can apply filters directly to individual items. This allows you to tailor your filter settings to each item's unique needs.
+
+To filter a specific item:
+
+1. Click on the item you want to filter in your dashboard.
+2. Click the <Edit style={{display: 'inline'}} /> Edit Item button in the top-right corner of the item.
+3. In the Edit Item menu, scroll down to the Filters section.
+4. Select the attribute you want to apply.
+5. Configure your filter settings as needed.
+
+## Global Filtering
+
+Need to apply filters across all items in your dashboard? No problem! Our global filtering feature allows you to set filters that affect all items at once. This is especially useful when you want to view specific data across multiple items.
+
+To apply global filters:
+
+1. Click on the <Filter style={{display: 'inline'}} /> Filter button in the sidebar.
+2. Select the attribute you want to apply.
+3. Configure your filter settings as needed.
+
+## Filter types
+
+With grafiki's filtering feature, you're just a few clicks away from unlocking valuable insights and making data-driven decisions. Each filter has a "Reset" button that allows you to clear the filter and view all data again. Click the "Reset" button to remove the filter and start fresh.
+
+| Filter Type                                        | Description                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ToggleLeft style={{display: 'inline'}} /> boolean | Filter data based on a true or false condition. Select one or both of the options to filter your data.                                                                                                                                                                                                                                                           |
+| <Hash style={{display: 'inline'}} /> number        | Filter data based on a numerical range. Set a lower bound, upper bound, or both to filter your data. Adjust the values using the sliders or input fields.                                                                                                                                                                                                        |
+| <Archive style={{display: 'inline'}} /> string     | Filter data based on a specific string value. Appearance changes depending on the number of available options:<br />- Multiple options (less than 50): Dropdown menu<br />- Fewer than multiple options: Checkboxes<br />- Large number of options (50 or more): Input field<br />Choose to include or exclude specific string values using the "Include" switch |
