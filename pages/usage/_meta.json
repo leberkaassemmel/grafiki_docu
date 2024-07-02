@@ -1,4 +1,7 @@
 {
   "sidebar": "Sidebar",
+  "dataset-selection": "Dataset Selection",
+  "template-selection": "Template Selection",
+  "dataset-template-support": "Support Level",
   "filter": "Filter"
 }

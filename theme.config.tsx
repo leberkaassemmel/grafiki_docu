@@ -11,6 +11,11 @@ const config: DocsThemeConfig = {
     alt="Logo"
   /> grafiki</span>,
   docsRepositoryBase: 'https://github.com/leberkaassemmel/grafiki_docu',
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – grafiki'
+    };
+  },
   footer: {
     text: (
       <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
