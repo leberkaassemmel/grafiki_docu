@@ -1,0 +1,29 @@
+import DocuImage from "../../components/image";
+
+# Template Selection
+
+grafiki's template feature allows you to define the structure and layout of your dashboards without holding any data. This template information is stored in the IndexedDB, alongside your datasets.
+
+## Template Structure
+
+The template structure is a JSON object that contains all properties needed for creating the dashboard. The structure can be found [here](/api-documentation/template). Templates are stored in the IndexedDB from the browser.
+
+## Filtering
+
+The selection interface is designed to provide a seamless experience for finding and selecting the right template for your needs. The UI features a search bar at the top for filtering available datasets.
+
+## Template Card
+
+Each template is displayed as a card, providing a concise overview of the template's details. The card includes:
+
+- **Title**: The name of the template, displayed prominently at the top of the card.
+- **Metadata**: Information about the template, such as the number of columns and rows.
+- **Support Level**: See [here](/usage/dataset-template-support) for more information.
+- **Items**: A preview of the items in the template, with icons representing the item type.
+- **Actions**: Three buttons at the bottom of the card allow you to:
+
+  - **Choose**: Select the template for creating a dashboard.
+  - **More**: Access additional options and actions for the template.
+  - **Delete**: Remove the template from your local storage.
+
+<DocuImage src="/template-card.png" />

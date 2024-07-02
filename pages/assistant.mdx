@@ -1,0 +1,57 @@
+import { Callout } from "nextra/components";
+
+# Assistant
+
+The AI Assistant in grafiki is a powerful tool that helps you create and manage items more efficiently. With the assistant, you can ask questions, get suggestions, and even create items based on your dataset. This documentation will guide you through the features and usage of the AI Assistant.
+
+<Callout type="error" emoji="️⚠️">
+  Please be aware that the Assistant's responses and generated items are based on its best efforts and may contain errors. Additionally, the resulting items may not be fully supported by grafiki,
+  which may limit their functionality or visibility. As such, you may not always see the expected output or results.
+</Callout>
+
+## Interface
+
+The Assistant interface is designed to be intuitive and user-friendly, comprising of several key components that facilitate seamless communication. At the top, you'll find a header that clearly displays a title and description, providing context for your interaction. Below, a message box showcases the assistant's responses to your queries, while a suggestion box offers multiple options to consider. To initiate a conversation, simply type your queries or messages into the text input field and click the conveniently located send button to submit them.
+
+## Template Assistant
+
+The Template Assistant is a dialog-based assistant that helps you create one or more items. Only a limited amount of your data will be sent to the assistant. You can access the Template Assistant by clicking on the button in the Grafiki dashboard.
+
+- Get suggestions for creating items based on your dataset
+- Ask questions to the assistant to clarify any doubts
+- Create one or more items with the assistant's guidance
+
+## Item Assistant
+
+The Item Assistant is a powerful tool that helps you customize an already existing item in Grafiki. With the Item Assistant, you can refine your item to better suit your needs.
+
+- Refine your item by asking the assistant for suggestions
+- Get help with creating specific visualizations, such as scatter plots
+- Filter out unwanted data points, like x-data over 100
+- Ask the assistant for help with customizing your item's appearance and behavior
+
+## Setup and Configuration
+
+To set up and configure the AI Assistant in Grafiki, follow these steps:
+
+1. Go to the Settings page by clicking on the user icon in the lower left corner of the Grafiki dashboard, or navigate to [Settings](https://www.grafiki.app/settings).
+2. Scroll down to the **Keys & Secrets** section.
+3. Enter the API endpoint and API key for your chosen Large Language Model (LLM) provider.
+
+<Callout type="error" emoji="️⚠️">
+
+The API key is saved inside the local storage, and it is encrypted for security purposes. However, please be aware of the potential risks associated with storing sensitive information locally.
+
+</Callout>
+
+### Compatible LLM Endpoints
+
+Grafiki supports any Open AI API-compatible LLM endpoint. Here are some examples:
+
+| Provider | API Endpoint                                    |
+| -------- | ----------------------------------------------- |
+| Groq     | `https://api.groq.com/openai/v1`                |
+| OpenAI   | `https://api.openai.com/v1`                     |
+| Ollama   | `http://localhost:11434/v1` (no API key needed) |
+
+We recommend using Groq, a cloud-based LLM provider. You can sign up for a Groq account and get an API key at [https://console.groq.com/](https://console.groq.com/).

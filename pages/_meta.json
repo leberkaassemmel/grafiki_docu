@@ -2,9 +2,16 @@
   "index": "Get Started",
   "quick-start": "Quick Start",
   "usage": "Work with your Data",
+  "assistant": "Assistant",
   "api-documentation": "API Documentation",
+  "app": {
+    "title": "App ↗",
+    "type": "page",
+    "href": "https://www.grafiki.app/",
+    "newWindow": true
+  },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contact ✉️",
     "type": "page",
     "href": "mailto:info@grafiki.app",
     "newWindow": true
