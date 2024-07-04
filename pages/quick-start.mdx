@@ -1,44 +1,51 @@
-import { Steps } from "nextra/components";
+import { Steps, Callout } from "nextra/components";
 import DocuImage from '../components/image'
  
 # Quick Start
 
-Follow the below steps to load your first [Dataset](/api-documentation/dataset) and create a new [Template](/api-documentation/template) based on that.
+Follow the below steps to load your first [Dataset](/usage/dataset-selection) and create a new [Template](/usage/template-selection) based on that.
 
 <Steps>
-### Step 1: Open Grafiki
+### Step 1: Open grafiki
 
-Welcome to Grafiki! Start by opening the app at [www.grafiki.app](http://www.grafiki.app). We're excited to have you on board!
+Welcome to grafiki! Start by opening the app at [www.grafiki.app](http://www.grafiki.app). We're excited to have you on board!
 
 ### Step 2: Choose Your Dataset
 
-When you first open Grafiki, you'll land on the "Choose Dataset" page. You have two options:
+When you first open grafiki, you'll land on the "Choose Dataset" page. You have two options:
 
-- Import your own data: Upload your own dataset to get started.
+- Import your own data: Upload your own dataset to get started or insert a url where a dataset is stored.
 - Choose an example: Select one of our pre-loaded examples to explore.
 
 <DocuImage src="/import.webp" />
 
+<Callout type="info" emoji="ℹ️">
+  We currently suppport only `json`and `csv` files. A detailed description of the dataset structure can be found [here](/api-documentation/dataset).
+</Callout>
+
 ### Step 3: Create a Template
 
-If you're new to Grafiki, an empty template will be created for you. Don't worry, we'll help you fill it up in no time!
+If you're new to grafiki, an empty template will be created for you. Don't worry, we'll help you fill it up in no time! If you already have templates saved, you will be redirected to the [Template Selection](/usage/template-selection).
 
 ### Step 4: Add Your First Item
 
-You can either add a new item manually or set up an assistant to help you with the process. The assistant is here to guide you through the creation process, making it easy to get started.
+Now it is time to add your first item! You have the following options:
+
+- Add an item manually by clicking on the "Add a new one" button in the center of the window. A dropdown list will appear with the different [groups and item types](/usage/items).
+- Set up an assistant to help you with the process. The assistant is here to guide you through the creation process, but needs some settings to be defined beforehand. Follow our guide [here](/assistant#setup-and-configuration).
 
 <DocuImage src="/create-item.webp" />
 
 ### Step 5: Customize Your Item
 
-In the Edit menu, you can change the main data, filter the data, add shapes, change the axis, and let the assistant help you with suggestions.
+In the Edit menu, you can change the main data, [filter](/usage/filter) the data, add shapes, change the axis, and let the assistant help you with suggestions.
 
 <DocuImage src="/edit.webp" />
 
 ### Step 6: Dive Deeper (for Advanced Users)
 
-For those who want more control, click the Advanced toggle on the lower left to access the full JSON data. This is where you can fine-tune every detail of your template.
+For those who want more control, click the Advanced toggle on the lower left to access the full JSON data. This is where you can fine-tune every detail of your [item](/api-documentation/template#item-attributes).
 
 </Steps>
 
-That's it! You're now ready to start exploring Grafiki and creating stunning dashboards. Happy building!
+That's it! You're now ready to start exploring grafiki and creating stunning dashboards. Happy building!
